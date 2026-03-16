@@ -1,66 +1,27 @@
-## Foundry
+# SinpmeStorage
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+SinpmeStorage is a simple smart contract project built with Foundry.
 
-Foundry consists of:
+## Project Description
 
-- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
-- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
-- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
-- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+The project contains a basic `Storage` smart contract (`src/Storage.sol`) that allows users to interact with a stored number on the blockchain. 
 
-## Documentation
+### Features
+- Stores a `uint256` number and the `address` of the contract deployer (owner).
+- `setNumber(uint256)`: Updates the stored number to a new value.
+- `getNumber()`: Retrieves the currently stored number.
+- `increment()`: Increases the stored number by 1.
 
-https://book.getfoundry.sh/
+## Deployed Contracts
 
-## Usage
+The `Storage` contract has been deployed to the Sepolia testnet at the following address:
 
-### Build
+- **Storage**: `0x39d4a85701c0e3803e908600712b0a74abc43fc9`
 
-```shell
-$ forge build
-```
+## Getting Started
 
-### Test
+To work with this project locally:
 
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+1. Install [Foundry](https://book.getfoundry.sh/)
+2. Run tests: `forge test`
+3. Compile the contracts: `forge build`
